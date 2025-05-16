@@ -273,6 +273,8 @@ Bimod (table size 1024)
 ras 8
 ![alt text](test%20photos/image-5.png)
 
+Correlating + BTB + RAS	
+![alt text](test%20photos/image-6.png)
 
 
 ### 🔍 Observations
