@@ -2,7 +2,8 @@
 # 📘 Pipeline Stalls Reduction Techniques  
 **Course Name:** ELE336 - Computer Architecture  
 
-## 👥 Team Members
+We extend our sincere gratitude and appreciation to Dr. May Salama for her exceptional supervision and dedication throughout the Computer Architecture course. Her clear explanations, continuous support, and insightful guidance greatly enriched our learning experience. ## 👥 Team Members
+
 1. Ahmed Bahy Yousef Shahat  
 2. Hassan Hussein Azmy  
 3. Abdelrahman Mahmoud Mohamed Mohamed  
