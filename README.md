@@ -258,22 +258,28 @@ $IDIR/simplesim-3.0/sim-bpred -bpred 2bit -btb -ras /tests/2bit_test.bin
 | Correlating    | ✅  | ✅ | `-bpred:2lev -bpred:btb -bpred:ras`    |
 
 ### 📋 Sample Output Summary 
-Taken test 
+#### Taken test 
+
 ![alt text](test%20photos/image-1.png)
 
-Not Taken test
+
+#### Not Taken test
 ![alt text](test%20photos/image-2.png)
 
-Bimod (table size 1024)
+#### Bimod (table size 1024)
+
 ![alt text](test%20photos/image-3.png)
 
-2lev ( lev1_size:1 lev2_size:2048 history_bit: 8 xor: 0)
+#### 2lev ( lev1_size:1 lev2_size:2048 history_bit: 8 xor: 0)
+
 ![alt text](test%20photos/image-4.png)
 
-ras 8
+#### ras 8
+
 ![alt text](test%20photos/image-5.png)
 
-Correlating + BTB + RAS	
+#### Correlating + BTB + RAS	
+
 ![alt text](test%20photos/image-6.png)
 
 
