@@ -2,17 +2,10 @@
 # 🚀 Simulation of Pipeline Stalls Reduction Techniques 
 
 A simulation project that models and analyzes Enhance a 5-stage pipeline simulator (from Assignment 1) to implement and analyze techniques for reducing control hazards using RAS,BTB and branch prediction, with a focus on understanding and solving challenges that arose during development.
-# 📘  
+
+
 **Course Name:** ELE336 - Computer Architecture  
-
 We extend our sincere gratitude and appreciation to Dr. May Salama for her exceptional supervision and dedication throughout the Computer Architecture course. Her clear explanations, continuous support, and insightful guidance greatly enriched our learning experience. 
-
-## 👥 Team Members
-1. Ahmed Bahy Yousef Shahat  
-2. Hassan Hussein Azmy  
-3. Abdelrahman Mahmoud Mohamed Mohamed  
-4. Abdallah Hany Ragab Mohamed  
-5. Mahmoud Ahmed Mahmoud Mohamed  
 
 ---
 
@@ -28,7 +21,8 @@ We extend our sincere gratitude and appreciation to Dr. May Salama for her excep
   - [✅ Testing the Setup](#-testing-the-setup)  
   - [✅ Running Your Own Programs](#-running-your-own-programs)  
 - [📊 Results & Analysis](#-results--analysis)  
-- [💡 Notes for Windows Users](#-notes-for-windows-users)  
+- [💡 Notes for Windows Users](#-notes-for-windows-users)
+- Contribution(#-Contribution)
 
 ---
 
@@ -304,3 +298,10 @@ You can run SimpleScalar using:
 - WSL (Windows Subsystem for Linux) on Windows 10+
 
 ---
+## Contribution
+# 👥 Team Members
+1. Ahmed Bahy Yousef Shahat  
+2. Hassan Hussein Azmy  
+3. Abdelrahman Mahmoud Mohamed Mohamed  
+4. Abdallah Hany Ragab Mohamed  
+5. Mahmoud Ahmed Mahmoud Mohamed  
