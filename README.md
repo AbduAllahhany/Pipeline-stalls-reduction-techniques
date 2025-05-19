@@ -232,7 +232,7 @@ $IDIR/bin/sslittle-na-sstrix-gcc -o <output> <input>
 ```
 To run 
 ```bash
-$IDIR/bin/sslittle-na-sstrix-gcc -o <output> <input>
+$IDIR/simplesim-3.0/sim-bpred <output>
 ```
 ---
 
@@ -255,28 +255,53 @@ $IDIR/bin/sslittle-na-sstrix-gcc -o <output> <input>
 | Correlating    | ✅  | ✅ | `-bpred:2lev -bpred:btb -bpred:ras`    |
 
 ### 📋 Sample Output Summary 
+```bash
+cd $IDIR 
+$IDIR/bin/sslittle-na-sstrix-gcc -o  tests/test tests/test.c
+```
 #### Taken test 
-
+```bash
+cd $IDIR
+$IDIR/simplesim-3.0/sim-bpred -bpred taken tests/test
+```
 ![alt text](test%20photos/image-1.png)
 
 
 #### Not Taken test
+```bash
+cd $IDIR
+$IDIR/simplesim-3.0/sim-bpred -bpred nottaken tests/test
+```
 ![alt text](test%20photos/image-2.png)
 
 #### Bimod (table size 1024)
+```bash
+cd $IDIR
+$IDIR/simplesim-3.0/sim-bpred -bpred:bimod 1024 tests/test
+```
 
 ![alt text](test%20photos/image-3.png)
 
 #### 2lev ( lev1_size:1 lev2_size:2048 history_bit: 8 xor: 0)
+```bash
+cd $IDIR
+$IDIR/simplesim-3.0/sim-bpred -bpred:2lev 1 2048 8 0 tests/test
+```
 
 ![alt text](test%20photos/image-4.png)
 
 #### ras 8
-
+```bash
+cd $IDIR
+$IDIR/simplesim-3.0/sim-bpred -bpred:ras 8 tests/test
+```
 ![alt text](test%20photos/image-5.png)
 
-#### Correlating + BTB + RAS	
-
+#### Correlating + BTB + RAS  
+```bash
+cd $IDIR
+$IDIR/simplesim-3.0/sim-bpred -bpred:2lev 1 2048 8 0 -bpred:ras 8 -bpred:btb 1024 4 tests/test
+```
 ![alt text](test%20photos/image-6.png)
 
 ---
