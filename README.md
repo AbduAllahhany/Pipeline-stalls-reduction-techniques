@@ -373,8 +373,8 @@ You can run SimpleScalar using:
 ---
 
 ## 👥 Contributors
-1. Ahmed Bahy Yousef Shahat  
-2. Hassan Hussein Azmy  
-3. Abdelrahman Mahmoud Mohamed Mohamed  
-4. Abdallah Hany Ragab Mohamed  
-5. Mahmoud Ahmed Mahmoud Mohamed 
+1. [Ahmed Bahy Yousef Shahat](https://github.com/ahmedbahyyoussef)  
+2. [Hassan Hussein Azmy](https://github.com/HassanAzmy)  
+3. [Abdelrahman Mahmoud Mohamed Mohamed](https://github.com/eltohamy3) 
+4. [Abdallah Hany Ragab Mohamed](https://github.com/AbduAllahhany)  
+5. [Mahmoud Ahmed Mahmoud Mohamed](https://github.com/MahmoudKhattab3)
