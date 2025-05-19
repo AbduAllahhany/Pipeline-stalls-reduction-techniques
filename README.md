@@ -210,11 +210,11 @@ chmod +x $IDIR/sslittle-na-sstrix/bin/ranlib
 ```
 
 ##### Manual Fixes
-- `Makefile`: Add `-I/usr/include`
+- `Makefile`: Add `-I/usr/include` #at line 130
 - `protoize.c`: `#include <varargs.h>` → `#include <stdarg.h>`
 - `obstack.h`:  
   ```c
-  *((void **)__o->next_free++) = ((void *)datum);
+  *((void **)__o->next_free++) = ((void *)datum); #at line 341 
   ```
 
 Then:
