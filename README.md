@@ -10,7 +10,7 @@ A simulation project that models and analyzes Enhance a 5-stage pipeline simulat
 - [💡 Acknowledgments](#-acknowledgments)
 - [🔍 Problem Description](#-problem-description)
 - [🧰 Prerequisites](#-prerequisites)
-- [🖥️ Environment Setup](https://github.com/AbduAllahhany/Pipeline-stalls-reduction-techniques?tab=readme-ov-file#%EF%B8%8F-environment-setup)
+- [🖥️ Environment Setup](#%EF%B8%8F-environment-setup)
 - [✏️ Simulation Code Implementation](#-simulation-code-implementation)
 - [🏁 Compile and Run](#-compile-and-run)
 - [🧪 Testing and Validation](#-testing-and-validation)
