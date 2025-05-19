@@ -138,18 +138,11 @@ int main() {
 ---
 
 ## 🏁 Compile and Run
-Clone the repo and create directory:
-```bash
-git clone https://github.com/AbduAllahhany/Pipeline-stalls-reduction-techniques
-cd Pipeline-stalls-reduction-techniques
-```
-
----
-
 ### 🔧 Installation Steps
 
 #### Step 1: Install SimpleTools
 ```bash
+cd $IDIR
 tar xvfz simpletools-2v0.tgz
 rm -rf gcc-2.6.3
 ```
