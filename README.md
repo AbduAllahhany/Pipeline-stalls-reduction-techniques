@@ -208,6 +208,7 @@ cp ../sslittle-na-sstrix/lib/crt0.o ../lib/
 
 ##### Fix: `ar` & `ranlib` buffer overflow
 ```bash
+cd $IDIR
 mv ar ranlib $IDIR/sslittle-na-sstrix/bin/
 chmod +x $IDIR/sslittle-na-sstrix/bin/ar
 chmod +x $IDIR/sslittle-na-sstrix/bin/ranlib
@@ -215,6 +216,7 @@ chmod +x $IDIR/sslittle-na-sstrix/bin/ranlib
 
 Compile:
 ```bash
+cd gcc-2.7.2.3
 make LANGUAGES=c CFLAGS=-O CC="gcc -m32"
 # Fix insn-output.c: Add '\' at lines 675, 750, 823
 make LANGUAGES=c CFLAGS=-O CC="gcc -m32" install
