@@ -52,7 +52,7 @@ To mitigate this:
 Install dependencies and enable 32-bit support:
 ```bash
 sudo apt update
-sudo apt install build-essential flex bison gcc-multilib g++-multilib lib32z1 libc6-i386 lib32gcc-s1 binutils-multiarch wget
+sudo apt install gcc build-essential flex bison gcc-multilib g++-multilib lib32z1 libc6-i386 lib32gcc-s1 binutils-multiarch wget
 ```
 
 ---
@@ -73,8 +73,8 @@ export TARGET=sslittle-na-sstrix
 
 ## ✏️ Simulation Code Implementation
 
-#include <stdio.h>
 <pre>
+#include <stdio.h>
 // Recursive function to stress RAS and 2-level prediction
 int fibonacci(int n) {
     if (n <= 1)
