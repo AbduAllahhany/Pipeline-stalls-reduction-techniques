@@ -227,6 +227,7 @@ cp ../sslittle-na-sstrix/lib/crt0.o ../lib/
 Compile:
 ```bash
 make LANGUAGES=c CFLAGS=-O CC="gcc -m32"
+# Fix insn-output.c: Add '\' at lines 675, 750, 823
 make enquire
 ../simplesim-3.0/sim-safe ./enquire -f > float.h-cross
 make LANGUAGES=c CFLAGS=-O CC="gcc -m32" install
