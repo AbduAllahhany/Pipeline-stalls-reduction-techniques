@@ -2,11 +2,6 @@
 # 🚀 Simulation of Pipeline Stalls Reduction Techniques 
 
 A simulation project that models and analyzes Enhance a 5-stage pipeline simulator (from Assignment 1) to implement and analyze techniques for reducing control hazards using RAS,BTB and branch prediction, with a focus on understanding and solving challenges that arose during development.
-
-
-**Course Name:** ELE336 - Computer Architecture  
-We extend our sincere gratitude and appreciation to Dr. May Salama for her exceptional supervision and dedication throughout the Computer Architecture course. Her clear explanations, continuous support, and insightful guidance greatly enriched our learning experience. 
-
 ---
 
 ## 📚 Table of Contents
