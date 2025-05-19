@@ -9,32 +9,32 @@ We extend our sincere gratitude and appreciation to Dr. May Salama for her excep
 
 ---
 
-## 📑 Table of Contents
-- [📘 Assignment Overview](#-assignment-overview)  
-- [📌 The Problem](#-the-problem)  
-- [🎯 Assignment Goal](#-assignment-goal)  
-- [🧠 Implementation Plan](#-implementation-plan)  
-- [⚙️ SimpleScalar Installation Guide](#️-simplescalar-installation-guide)  
-  - [📦 Prerequisites](#-prerequisites)  
-  - [📁 Setup](#-setup)  
-  - [🔧 Installation Steps](#-installation-steps)  
-  - [✅ Testing the Setup](#-testing-the-setup)  
-  - [✅ Running Your Own Programs](#-running-your-own-programs)  
-- [📊 Results & Analysis](#-results--analysis)  
-- [💡 Notes for Windows Users](#-notes-for-windows-users)
-- [Contribution](#-Contribution)
+## 📚 Table of Contents
+
+- [💡 Acknowledgments](#-acknowledgments)
+- [🔍 Problem Description](#-problem-description)
+- [🧰 Prerequisites](#-prerequisites)
+- [🖥️ Environment Setup](#-environment-setup)
+- [✏️ Simulation Code Implementation](#-simulation-code-implementation)
+- [🏁 Compile and Run](#-compile-and-run)
+- [🧪 Testing and Validation](#-testing-and-validation)
+- [🧩 Challenges Encountered](#-challenges-encountered)
+- [🛠️ Handling Challenges](#-handling-challenges)
+- [📝 Conclusion](#-conclusion)
+- [📌 References](#-references)
+- [👥 Contributors](#-contributors)
 
 ---
 
-## 📘 Assignment Overview
-Enhance a 5-stage pipeline simulator (from Assignment 1) to implement and analyze techniques for reducing control hazards using:
-- Branch Prediction: Predicts whether a branch will be taken or not before its actual resolution, allowing the pipeline to continue fetching instructions along the predicted path.  
-- Branch Target Buffer (BTB): Stores the target addresses of previously encountered branch instructions to reduce the time needed to determine where to jump.  
-- Return Address Stack (RAS): Specifically aids in predicting return addresses of function calls, which are otherwise difficult to predict accurately using BTB alone.  
+## 💡 Acknowledgments
+
+**Course Name:** ELE336 - Computer Architecture  
+We extend our sincere gratitude and appreciation to Dr. May Salama for her exceptional supervision and dedication throughout the Computer Architecture course. Her clear explanations, continuous support, and insightful guidance greatly enriched our learning experience. 
 
 ---
 
-## 📌 The Problem
+
+## 🔍 Problem Description
 
 Modern microprocessors execute multiple instructions per clock cycle using deep instruction pipelines. However, control hazards — due to unpredictable branch instructions — can cause stalls and decrease efficiency.
 
@@ -47,41 +47,7 @@ To mitigate this:
 
 ---
 
-## 🎯 Assignment Goal
-
-Extend the simulator to:
-- Simulate realistic branch prediction techniques
-- Integrate BTB for early jump target prediction
-- Incorporate RAS for function call return tracking
-- Evaluate and compare these techniques in reducing stalls and improving instruction throughput
-
----
-
-## 🧠 Implementation Plan
-
-### ✔️ Implement Branch Prediction
-- Use `bpred.c/h` from SimpleScalar
-- Support:
-  - 2-bit Saturating Counter (BPred2Bit)
-  - (2,2) Correlating Predictor (BPred2Level)
-- Add `-bpred` option
-- Handle prediction and correction in ID and EX stages
-
-### ✔️ Add Branch Target Buffer (BTB)
-- Predict target address during IF stage
-- Add `-btb` option to enable/disable
-- Track predicted targets and compare for accuracy
-
-### ✔️ Add Return Address Stack (RAS)
-- Stack size = 8
-- Used for procedure returns
-- Enable with `-ras` flag
-
----
-
-## ⚙️ SimpleScalar Installation Guide
-
-### 📦 Prerequisites
+## 🧰 Prerequisites
 
 Install dependencies and enable 32-bit support:
 ```bash
@@ -91,14 +57,31 @@ sudo apt install build-essential flex bison gcc-multilib g++-multilib lib32z1 li
 
 ---
 
-### 📁 Setup
-
+## 🖥️ Environment Setup
 Clone the repo and create directory:
 ```bash
-git clone https://github.com/AbduAllahhany/Simple-Scalar
-cd simple-scaler
+git clone https://github.com/AbduAllahhany/Pipeline-stalls-reduction-techniques
+cd Pipeline-stalls-reduction-techniques
 
-export IDIR=$HOME/simplescalar
+export IDIR=$HOME/Pipeline-stalls-reduction-techniques
+export HOST=i686-pc-linux
+export TARGET=sslittle-na-sstrix
+
+mkdir -p $IDIR
+```
+---
+
+## ✏️ Simulation Code Implementation
+
+---
+
+## 🏁 Compile and Run
+Clone the repo and create directory:
+```bash
+git clone https://github.com/AbduAllahhany/Pipeline-stalls-reduction-techniques
+cd Pipeline-stalls-reduction-techniques
+
+export IDIR=$HOME/Pipeline-stalls-reduction-techniques
 export HOST=i686-pc-linux
 export TARGET=sslittle-na-sstrix
 
@@ -190,55 +173,7 @@ make LANGUAGES=c CFLAGS=-O CC="gcc -m32" install
 
 ---
 
-## ✅ Testing the Setup
-
-Create a file `hello.c`:
-```c
-#include <stdio.h>
-int main() {
-    printf("Hello World!\n");
-    return 0;
-}
-```
-
-Compile:
-```bash
-$IDIR/bin/sslittle-na-sstrix-gcc -o hello hello.c
-```
-
-Run:
-```bash
-$IDIR/simplesim-3.0/sim-safe hello
-```
-
-Expected Output:
-```
-sim: ** starting functional simulation **
-Hello World!
-```
-
----
-
-## ✅ Running Your Own Programs
-
-If your test files (e.g. `2bit_test.c`) are in `/tests/`:
-
-### 🧪 Compile Test
-```bash
-$IDIR/bin/sslittle-na-sstrix-gcc -o /tests/2bit_test.bin /tests/2bit_test.c
-```
-
-### ▶️ Run with Branch Prediction
-```bash
-$IDIR/simplesim-3.0/sim-bpred -bpred 2bit -btb -ras /tests/2bit_test.bin
-```
-
----
-
-## 📊 Results & Analysis
-
-### 🧪 Test Programs Used
-
+## 🧪 Testing and Validation
 | Program         | Description                                |
 |----------------|--------------------------------------------|
 | `test.c`        | Evaulate fibonacci sequence     |
@@ -281,7 +216,42 @@ $IDIR/simplesim-3.0/sim-bpred -bpred 2bit -btb -ras /tests/2bit_test.bin
 
 ![alt text](test%20photos/image-6.png)
 
+---
 
+## 🧩 Challenges Encountered
+
+- ❌ `as: unrecognized option '--32'`: The system was invoking the wrong assembler (`as`) from the SimpleScalar toolchain that doesn’t support 32-bit flags used by modern `gcc`.
+- ❌ Buffer overflow during `ar rc libgcc1.null`: SimpleScalar's version of `ar` was outdated and incompatible with modern ELF object files.
+- ❌ `sys_nerr` undefined: Legacy GCC used a deprecated glibc variable no longer available in modern systems.
+- ❌ Architecture mismatch: 32-bit objects were being linked with a 64-bit `ld`, causing failure.
+- ❌ `sim-safe` failed to run binaries: Programs compiled with the host GCC were not compatible with the SimpleScalar simulator.
+- ❌ `sslittle-na-sstrix-gcc: No such file or directory`: Even though the binary existed, missing 32-bit runtime support caused execution failure on modern Ubuntu.
+
+---
+
+## 🛠️ Handling Challenges
+
+To resolve the above issues, the following steps were taken:
+
+- ✅ **Assembler Conflict:**  
+  The system `$PATH` was temporarily reordered to ensure that `/usr/bin/as` was used instead of the incompatible SimpleScalar version.
+
+- ✅ **Broken `ar`/`ranlib`:**  
+  Pre-existing working versions of `ar` and `ranlib` were placed in `sslittle-na-sstrix/bin/` and made executable, replacing the broken versions.
+
+- ✅ **Source Code Patches:**  
+  Manual fixes were applied to several source files:
+  - Replaced `#include <varargs.h>` with `#include <stdarg.h>`
+  - Fixed buffer overflows in `obstack.h`
+  - Added missing includes and build flags in the `Makefile`
+
+- ✅ **Installed 32-bit Compatibility Libraries:**  
+  Required 32-bit development and runtime packages were installed (`libc6-i386`, `lib32z1`, `gcc-multilib`, etc.) to support cross-compilation and execution.
+
+- ✅ **Proper Compilation Flow:**  
+  Ensured that test programs were compiled using `sslittle-na-sstrix-gcc` and verified as PISA binaries using the `file` command.
+
+---
 ### 🔍 Observations
 
 - Branch prediction reduces pipeline stalls significantly.
@@ -291,6 +261,26 @@ $IDIR/simplesim-3.0/sim-bpred -bpred 2bit -btb -ras /tests/2bit_test.bin
 
 ---
 
+## 📝 Conclusion
+
+Setting up SimpleScalar on a modern Linux system involves several compatibility fixes due to its reliance on legacy toolchains and libraries. Through manual patching, legacy `ar`/`ranlib` replacements, and environment setup, we successfully:
+
+- Installed and configured the SimpleScalar simulator and toolchain
+- Built a working cross-compiler (`sslittle-na-sstrix-gcc`)
+- Patched and compiled legacy GCC (2.7.2.3) for PISA architecture
+- Created and ran a sample C program through the SimpleScalar simulator
+
+This environment can now be used for experimenting with compiler behavior, running statically compiled PISA binaries, and simulating program execution in research or academic contexts.
+
+> ✅ You now have a fully functioning SimpleScalar system ready to run and analyze programs for the PISA architecture.
+---
+
+## 📌 References
+[Simple Scalar link](https://github.com/toddmaustin/simplesim-3.0)
+
+[Simple Scalar compiler and tools ](https://github.com/Awesome-BUPT/simple-scalar.git)
+---
+
 ## 💡 Notes for Windows Users
 
 You can run SimpleScalar using:
@@ -298,10 +288,10 @@ You can run SimpleScalar using:
 - WSL (Windows Subsystem for Linux) on Windows 10+
 
 ---
-## Contribution
-# 👥 Team Members
+
+## 👥 Contributors
 1. Ahmed Bahy Yousef Shahat  
 2. Hassan Hussein Azmy  
 3. Abdelrahman Mahmoud Mohamed Mohamed  
 4. Abdallah Hany Ragab Mohamed  
-5. Mahmoud Ahmed Mahmoud Mohamed  
+5. Mahmoud Ahmed Mahmoud Mohamed 
