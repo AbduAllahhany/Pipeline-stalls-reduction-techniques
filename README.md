@@ -15,7 +15,7 @@ A simulation project that models and analyzes Enhance a 5-stage pipeline simulat
 - [🏁 Compile and Run](#-compile-and-run)
 - [🧪 Testing and Validation](#-testing-and-validation)
 - [🧩 Challenges Encountered](#-challenges-encountered)
-- [🛠️ Handling Challenges](#-handling-challenges)
+- [🛠️ Handling Challenges](#%EF%B8%8F-handling-challenges)
 - [📝 Conclusion](#-conclusion)
 - [📌 References](#-references)
 - [👥 Contributors](#-contributors)
