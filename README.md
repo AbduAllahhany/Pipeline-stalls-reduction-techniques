@@ -74,7 +74,7 @@ mkdir -p $IDIR
 ## ✏️ Simulation Code Implementation
 
 #include <stdio.h>
-<pre>```c
+<pre> ```c
 // Recursive function to stress RAS and 2-level prediction
 int fibonacci(int n) {
     if (n <= 1)
@@ -134,8 +134,7 @@ int main() {
 
     return 0;
 }
-```
- </pre>
+``` </pre>
 ---
 
 ## 🏁 Compile and Run
