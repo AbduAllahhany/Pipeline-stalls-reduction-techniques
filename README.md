@@ -54,6 +54,7 @@ sudo apt install gcc build-essential flex bison gcc-multilib g++-multilib lib32z
 ---
 
 ## 🖥️ Environment Setup
+
 Clone the repo and create directory:
 ```bash
 git clone https://github.com/AbduAllahhany/Pipeline-stalls-reduction-techniques
@@ -68,6 +69,7 @@ export TARGET=sslittle-na-sstrix
 ---
 
 ## ✏️ Simulation Code Implementation
+
 
 <pre>
 #include <stdio.h>
@@ -134,6 +136,7 @@ int main() {
 ---
 
 ## 🏁 Compile and Run
+
 ### 🔧 Installation Steps
 
 #### Step 1: Install SimpleTools
