@@ -2,6 +2,7 @@
 # 🚀 Simulation of Pipeline Stalls Reduction Techniques 
 
 A simulation project that models and analyzes Enhance a 5-stage pipeline simulator (from Assignment 1) to implement and analyze techniques for reducing control hazards using RAS,BTB and branch prediction, with a focus on understanding and solving challenges that arose during development.
+
 ---
 
 ## 📚 Table of Contents
