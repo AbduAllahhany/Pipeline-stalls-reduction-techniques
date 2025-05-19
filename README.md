@@ -11,7 +11,7 @@ A simulation project that models and analyzes Enhance a 5-stage pipeline simulat
 - [🔍 Problem Description](#-problem-description)
 - [🧰 Prerequisites](#-prerequisites)
 - [🖥️ Environment Setup](#%EF%B8%8F-environment-setup)
-- [✏️ Simulation Code Implementation](#-simulation-code-implementation)
+- [✏️ Simulation Code Implementation](#%EF%B8%8F-simulation-code-implementation)
 - [🏁 Compile and Run](#-compile-and-run)
 - [🧪 Testing and Validation](#-testing-and-validation)
 - [🧩 Challenges Encountered](#-challenges-encountered)
