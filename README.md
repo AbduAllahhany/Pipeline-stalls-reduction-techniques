@@ -74,7 +74,7 @@ mkdir -p $IDIR
 ## ✏️ Simulation Code Implementation
 
 #include <stdio.h>
-<pre> ```c
+<pre>
 // Recursive function to stress RAS and 2-level prediction
 int fibonacci(int n) {
     if (n <= 1)
@@ -134,7 +134,7 @@ int main() {
 
     return 0;
 }
-``` </pre>
+</pre>
 ---
 
 ## 🏁 Compile and Run
@@ -337,9 +337,9 @@ This environment can now be used for experimenting with compiler behavior, runni
 ---
 
 ## 📌 References
-[Simple Scalar link](https://github.com/toddmaustin/simplesim-3.0)
+[Simple Scalar simulation](https://github.com/toddmaustin/simplesim-3.0)
+[Simple Scalar compiler and tools](https://github.com/Awesome-BUPT/simple-scalar.git)
 
-[Simple Scalar compiler and tools ](https://github.com/Awesome-BUPT/simple-scalar.git)
 ---
 
 ## 💡 Notes for Windows Users
