@@ -142,12 +142,6 @@ Clone the repo and create directory:
 ```bash
 git clone https://github.com/AbduAllahhany/Pipeline-stalls-reduction-techniques
 cd Pipeline-stalls-reduction-techniques
-
-export IDIR=$HOME/Pipeline-stalls-reduction-techniques
-export HOST=i686-pc-linux
-export TARGET=sslittle-na-sstrix
-
-mkdir -p $IDIR
 ```
 
 ---
@@ -202,20 +196,15 @@ cd gcc-2.7.2.3
 chmod -R +w .
 ```
 
-##### Fix: `ar` & `ranlib` buffer overflow
-```bash
-mv ar ranlib $IDIR/sslittle-na-sstrix/bin/
-chmod +x $IDIR/sslittle-na-sstrix/bin/ar
-chmod +x $IDIR/sslittle-na-sstrix/bin/ranlib
-```
-
 ##### Manual Fixes
-- `Makefile`: Add `-I/usr/include` #at line 130
+- `Makefile`: Add `-I/usr/include` #at line 130 in the end 
 - `protoize.c`: `#include <varargs.h>` → `#include <stdarg.h>`
 - `obstack.h`:  
   ```c
-  *((void **)__o->next_free++) = ((void *)datum); #at line 341 
+  *((void **)__o->next_free++) = ((void *)datum); #at line 341
   ```
+in gcc.c replace extern int sys_nerr wirh #define sys_nerr 120
+
 
 Then:
 ```bash
@@ -224,15 +213,27 @@ cp ../sslittle-na-sstrix/lib/libc.a ../lib/
 cp ../sslittle-na-sstrix/lib/crt0.o ../lib/
 ```
 
+##### Fix: `ar` & `ranlib` buffer overflow
+```bash
+mv ar ranlib $IDIR/sslittle-na-sstrix/bin/
+chmod +x $IDIR/sslittle-na-sstrix/bin/ar
+chmod +x $IDIR/sslittle-na-sstrix/bin/ranlib
+```
+
 Compile:
 ```bash
 make LANGUAGES=c CFLAGS=-O CC="gcc -m32"
 # Fix insn-output.c: Add '\' at lines 675, 750, 823
-make enquire
-../simplesim-3.0/sim-safe ./enquire -f > float.h-cross
 make LANGUAGES=c CFLAGS=-O CC="gcc -m32" install
 ```
-
+To compile file 
+```bash
+$IDIR/bin/sslittle-na-sstrix-gcc -o <output> <input>
+```
+To run 
+```bash
+$IDIR/bin/sslittle-na-sstrix-gcc -o <output> <input>
+```
 ---
 
 ## 🧪 Testing and Validation
