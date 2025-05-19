@@ -63,11 +63,11 @@ Clone the repo and create directory:
 git clone https://github.com/AbduAllahhany/Pipeline-stalls-reduction-techniques
 cd Pipeline-stalls-reduction-techniques
 
+# replace with directory of your repo
 export IDIR=$HOME/Pipeline-stalls-reduction-techniques
 export HOST=i686-pc-linux
 export TARGET=sslittle-na-sstrix
 
-mkdir -p $IDIR
 ```
 ---
 
